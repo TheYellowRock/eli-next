@@ -1,6 +1,5 @@
-import { PrismaClient } from '@prisma/client'
 
-const prisma = new PrismaClient()
+import { prisma } from './db'
 
 export async function getProducts() {
   try {
@@ -27,5 +26,23 @@ export async function getProduct(id: number) {
   } catch (error) {
     console.error('Error fetching product:', error)
     return null
+  }
+}
+
+export async function createProduct(data: {
+  name: string
+  description: string
+  price: number
+  category: string
+  imageUrl?: string
+}) {
+  try {
+    const product = await prisma.product.create({
+      data
+    })
+    return product
+  } catch (error) {
+    console.error('Error creating product:', error)
+    throw error
   }
 }
