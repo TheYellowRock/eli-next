@@ -1,3 +1,5 @@
+import CtaSection from "./components/CTASection"
+import HeroBanner from "./components/Hero"
 import ProductGrid from "./components/ProductGrid"
 import { getProducts } from "./lib/products"
 
@@ -7,9 +9,11 @@ export default async function Home() {
   const products = await getProducts()
   
   return (
-    <main className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Product Catalog</h1>
-      <ProductGrid products={products} />
+    <main className=" w-full">
+      <HeroBanner />
+      <ProductGrid products={products} collectionVariant="women" />
+      <CtaSection />
+      <ProductGrid products={products} collectionVariant="men" />
     </main>
   )
 }
