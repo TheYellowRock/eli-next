@@ -75,19 +75,19 @@ const Navbar: React.FC = () => {
                 href="#"
                 className="text-black hover:bg-gray-200 hover:text-black block px-3 py-2 rounded-md text-base font-medium"
               >
-                About
+                Men
               </a>
               <a
                 href="#"
                 className="text-black hover:bg-gray-200 hover:text-black block px-3 py-2 rounded-md text-base font-medium"
               >
-                Services
+                Women
               </a>
               <a
                 href="#"
                 className="text-black hover:bg-gray-200 hover:text-black block px-3 py-2 rounded-md text-base font-medium"
               >
-                Contact
+                Your Brand
               </a>
             </div>
           </div>

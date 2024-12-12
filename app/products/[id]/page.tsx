@@ -1,8 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { prisma } from '@/app/lib/db';
 import Image from 'next/image';
 
-export default async function ProductPage({ params }: { params: any }) {
+export default async function ProductPage({ params }: { params: { id: string } }) {
   const productId = Number(params.id);
 
   if (isNaN(productId)) {

@@ -15,6 +15,42 @@ export async function getProducts() {
   }
 }
 
+export async function getRandomMenProducts() {
+  try {
+    const products = await prisma.product.findMany({
+      where: {
+        category: 'men',
+      },
+      orderBy: {
+        createdAt: 'desc',
+      },
+      take: 5,
+    });
+    return products;
+  } catch (error) {
+    console.error('Error fetching men products:', error);
+    return [];
+  }
+}
+
+export async function getRandomWomenProducts() {
+  try {
+    const products = await prisma.product.findMany({
+      where: {
+        category: 'women',
+      },
+      orderBy: {
+        createdAt: 'desc',
+      },
+      take: 5,
+    });
+    return products;
+  } catch (error) {
+    console.error('Error fetching women products:', error);
+    return [];
+  }
+}
+
 export async function getProduct(id: number) {
   try {
     const product = await prisma.product.findUnique({
