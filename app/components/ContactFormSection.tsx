@@ -1,7 +1,10 @@
 export default function ContactFormSection() {
     return (
-      <section className="bg-gradient-to-r from-blue-500 to-blue-700 h-screen flex items-center justify-center p-8">
-        <div className="container mx-auto text-center max-w-lg bg-white rounded-lg shadow-lg p-8">
+      <section
+        className="h-screen flex items-center justify-center p-8 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url('/images/form-bg.jpg')` }}
+      >
+        <div className="container mx-auto text-center max-w-lg bg-white rounded-lg shadow-lg p-8 opacity-90">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">Get in Touch</h2>
           <p className="text-gray-600 mb-8">
             Have questions about starting your brand? Fill out the form below and our team will
@@ -43,3 +46,4 @@ export default function ContactFormSection() {
       </section>
     );
   }
+  
