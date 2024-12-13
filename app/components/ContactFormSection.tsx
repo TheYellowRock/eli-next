@@ -1,6 +1,6 @@
 export default function ContactFormSection() {
     return (
-      <section className="bg-gradient-to-r from-blue-500 to-blue-700 h-screen flex items-center justify-center">
+      <section className="bg-gradient-to-r from-blue-500 to-blue-700 h-screen flex items-center justify-center p-8">
         <div className="container mx-auto text-center max-w-lg bg-white rounded-lg shadow-lg p-8">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">Get in Touch</h2>
           <p className="text-gray-600 mb-8">

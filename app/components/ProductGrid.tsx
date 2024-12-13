@@ -47,11 +47,18 @@ export default function ProductGrid({
         <ProductCard key={product.id} product={product} />
       ))}
 
-      {/* See More Card */}
       <Link href={`/collections/${collectionVariant}`} legacyBehavior>
-        <a className="relative  overflow-hidden shadow-sm hover:shadow-md transition-shadow flex items-center justify-center bg-gray-100 h-full">
-          <div className="absolute inset-0 bg-gray-100 hover:bg-gray-200 transition-colors"></div>
-          <span className="relative text-lg font-semibold text-blue-600 z-10">See More Products</span>
+        <a className="group relative overflow-hidden shadow-sm transition-all duration-300 ease-in-out flex items-center justify-center bg-white h-full hover:shadow-md">
+          {/* Background overlay that changes on hover */}
+          <div className="absolute inset-0 bg-white transition-colors duration-300 ease-in-out group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-blue-600" />
+
+          {/* Text and arrow */}
+          <span className="relative z-10 text-lg font-semibold text-black flex items-center gap-2 transition-colors duration-300 ease-in-out group-hover:text-white">
+            See More Products
+            <span className="inline-block transform transition-transform duration-300 ease-in-out group-hover:translate-x-1">
+              →
+            </span>
+          </span>
         </a>
       </Link>
     </div>

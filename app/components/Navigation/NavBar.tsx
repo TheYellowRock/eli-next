@@ -9,11 +9,15 @@ const Navbar: React.FC = () => {
   return (
     <nav className="bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center py-4">
-          <div className="flex-shrink-0 mb-4">
+        {/* Container that switches from row on mobile to column on desktop */}
+        <div className="flex items-center justify-between py-4 md:flex-col md:items-center">
+          {/* Logo */}
+          <div className="flex-shrink-0">
             <img src="/images/LogoEli.webp" alt="Logo" className="h-24 w-auto" />
           </div>
-          <div className="hidden md:block">
+
+          {/* Desktop Links (hidden on mobile) */}
+          <div className="hidden md:block mt-4">
             <div className="flex items-center space-x-4">
               <a
                 href="#"
@@ -25,23 +29,25 @@ const Navbar: React.FC = () => {
                 href="#"
                 className="text-black hover:bg-gray-200 hover:text-black px-3 py-2 rounded-md text-sm font-medium"
               >
-                About
+                Men
               </a>
               <a
                 href="#"
                 className="text-black hover:bg-gray-200 hover:text-black px-3 py-2 rounded-md text-sm font-medium"
               >
-                Services
+                Women
               </a>
               <a
                 href="#"
                 className="text-black hover:bg-gray-200 hover:text-black px-3 py-2 rounded-md text-sm font-medium"
               >
-                Contact
+                Your Brand
               </a>
             </div>
           </div>
-          <div className="-mr-2 flex md:hidden">
+
+          {/* Mobile Menu Button (hidden on desktop) */}
+          <div className="flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-black hover:text-black hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-black"

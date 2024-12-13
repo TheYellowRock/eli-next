@@ -24,9 +24,9 @@ const HeroBanner: React.FC = () => {
   return (
     <div
       className="h-screen bg-cover bg-center flex items-center justify-center text-center"
-      style={{ backgroundImage: "url('/images/hero.jpg')" }}
+      style={{ backgroundImage: "url('/images/hero1.jpg')" }}
     >
-      <div id="hero-content" className="space-y-6">
+      <div id="hero-content" className="space-y-8">
         <h1
           className={`text-white font-sans text-4xl md:text-6xl font-bold mb-4 transition-opacity duration-1000 transform ${
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'
@@ -35,7 +35,7 @@ const HeroBanner: React.FC = () => {
           Discover Our Exquisite Perfume Collection
         </h1>
         <p
-          className={`text-gray-300 font-sans text-lg md:text-xl mb-6 transition-opacity duration-1000 transform delay-200 ${
+          className={`text-gray-100 font-sans text-lg md:text-2xl mb-6 transition-opacity duration-1000 transform delay-200 ${
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'
           }`}
         >

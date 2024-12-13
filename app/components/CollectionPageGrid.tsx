@@ -9,11 +9,11 @@ interface CollectionPageGridProps {
 
 const collectionData = {
   men: {
-    imageUrl: "/images/men-collection.jpg",
+    imageUrl: "/images/men-collection-page.jpg",
     title: "Explore the Men Collection",
   },
   women: {
-    imageUrl: "/images/woman-collection.jpg",
+    imageUrl: "/images/women-collection-page.jpg",
     title: "Discover the Women Collection",
   },
 };
@@ -42,7 +42,7 @@ export default function CollectionPageGrid({
       </div>
 
       {/* Product Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 p-4">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
