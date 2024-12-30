@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,30 +20,30 @@ const Navbar: React.FC = () => {
           {/* Desktop Links (hidden on mobile) */}
           <div className="hidden md:block mt-4">
             <div className="flex items-center space-x-4">
-              <a
+            <Link
                 href="/"
                 className="text-black hover:bg-gray-200 hover:text-black px-3 py-2 rounded-md text-sm font-medium"
               >
                 Home
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/collections/men"
                 className="text-black hover:bg-gray-200 hover:text-black px-3 py-2 rounded-md text-sm font-medium"
               >
                 Men
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/collections/women"
                 className="text-black hover:bg-gray-200 hover:text-black px-3 py-2 rounded-md text-sm font-medium"
               >
                 Women
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/your-brand"
                 className="text-black hover:bg-gray-200 hover:text-black px-3 py-2 rounded-md text-sm font-medium"
               >
                 Your Brand
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -71,30 +72,30 @@ const Navbar: React.FC = () => {
         {() => (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <a
-                href="#"
+            <Link
+                href="/"
                 className="text-black hover:bg-gray-200 hover:text-black block px-3 py-2 rounded-md text-base font-medium"
               >
                 Home
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/collections/men"
                 className="text-black hover:bg-gray-200 hover:text-black block px-3 py-2 rounded-md text-base font-medium"
               >
                 Men
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/collections/women"
                 className="text-black hover:bg-gray-200 hover:text-black block px-3 py-2 rounded-md text-base font-medium"
               >
                 Women
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/your-brand"
                 className="text-black hover:bg-gray-200 hover:text-black block px-3 py-2 rounded-md text-base font-medium"
               >
                 Your Brand
-              </a>
+              </Link>
             </div>
           </div>
         )}
