@@ -68,6 +68,7 @@ export async function getProduct(id: number) {
 export async function createProduct(data: {
   name: string
   description: string
+  longDescription: string
   price: number
   category: string
   imageUrl?: string

@@ -1,19 +1,20 @@
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
   previewFeatures = []
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model Product {
-  id          Int      @id @default(autoincrement())
-  name        String
-  description String   // Stores rich text as a string (e.g., HTML or JSON)
-  category    String    @default("unspecified")// 'male' or 'female'
-  imageUrl    String?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id              Int      @id @default(autoincrement())
+  name            String
+  description     String
+  longDescription String   @default(" ") // Stores rich text as a string (e.g., HTML or JSON)
+  category        String   @default("unspecified") // 'male' or 'female'
+  imageUrl        String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
 }
