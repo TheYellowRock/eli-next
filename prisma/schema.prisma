@@ -1,12 +1,14 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
 generator client {
   provider        = "prisma-client-js"
   previewFeatures = []
 }
 
-datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
-}
+
 
 model Product {
   id              Int      @id @default(autoincrement())

@@ -47,20 +47,80 @@ export default function ProductGrid({
         <ProductCard key={product.id} product={product} />
       ))}
 
-      <Link href={`/collections/${collectionVariant}`} legacyBehavior>
-        <a className="group relative overflow-hidden shadow-sm transition-all duration-300 ease-in-out flex items-center justify-center bg-white h-full hover:shadow-md">
-          {/* Background overlay that changes on hover */}
-          <div className="absolute inset-0 bg-white transition-colors duration-300 ease-in-out group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-blue-600" />
+<Link
+      href={`/collections/${collectionVariant}`}
+      className="
+        group 
+        relative 
+        overflow-hidden 
+        shadow-sm 
+        transition-all 
+        duration-300 
+        ease-in-out 
+        flex 
+        items-center 
+        justify-center 
+        bg-blue-500 
+        h-full 
+        text-white 
+        md:bg-white 
+        md:text-black 
+        hover:shadow-md 
+        md:hover:bg-gradient-to-r 
+        md:hover:from-blue-500 
+        md:hover:to-blue-600 
+        md:group-hover:text-white
+      "
+      aria-label={`View more products in the ${collectionVariant} collection`}
+    >
+      {/* Background overlay that changes on hover */}
+      <div
+        className="
+          absolute 
+          inset-0 
+          bg-blue-500 
+          md:bg-white 
+          transition-colors 
+          duration-300 
+          ease-in-out 
+          md:group-hover:bg-gradient-to-r 
+          md:group-hover:from-blue-500 
+          md:group-hover:to-blue-600
+        "
+      />
 
-          {/* Text and arrow */}
-          <span className="relative z-10 text-lg font-semibold text-black flex items-center gap-2 transition-colors duration-300 ease-in-out group-hover:text-white">
-            See More Products
-            <span className="inline-block transform transition-transform duration-300 ease-in-out group-hover:translate-x-1">
-              →
-            </span>
-          </span>
-        </a>
-      </Link>
+      {/* Text and arrow */}
+      <span
+        className="
+          relative 
+          z-10 
+          text-lg 
+          font-semibold 
+          flex 
+          items-center 
+          justify-center 
+          gap-2 
+          transition-colors 
+          duration-300 
+          ease-in-out 
+          md:group-hover:text-white
+        "
+      >
+        See More Products
+        <span
+          className="
+            inline-block 
+            transform 
+            transition-transform 
+            duration-300 
+            ease-in-out 
+            md:group-hover:translate-x-1
+          "
+        >
+          →
+        </span>
+      </span>
+    </Link>
     </div>
   );
 }
