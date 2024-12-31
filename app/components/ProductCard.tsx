@@ -47,7 +47,7 @@ export default function ProductCard({ product }: ProductCardProps) {
               md:p-0
             "
           >
-            <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
+            <h3 className="text-xs font-semibold ">{product.name}</h3>
           </div>
 
           {/* Description - Hidden on Mobile */}

@@ -57,11 +57,11 @@ export default function ContactFormSection() {
           <ul className="text-gray-700 space-y-6">
             <li className="flex items-center gap-3">
               <FaMapMarkerAlt className="text-blue-600" />
-              <span>1234 Perfume Street, Fragrance City, Wonderland</span>
+              <span>ul. Stefana Jaracza 108/3, 90-244 Łódź</span>
             </li>
             <li className="flex items-center gap-3">
               <FaPhone className="text-blue-600" />
-              <span>+1 (123) 456-7890</span>
+              <span>+48 728 930 202</span>
             </li>
             <li className="flex items-center gap-3">
               <FaEnvelope className="text-blue-600" />

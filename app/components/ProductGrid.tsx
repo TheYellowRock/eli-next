@@ -99,6 +99,7 @@ export default function ProductGrid({
           flex 
           items-center 
           justify-center 
+          p-3
           gap-2 
           transition-colors 
           duration-300 
